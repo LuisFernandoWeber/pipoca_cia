@@ -1,0 +1,11 @@
+[
+  {
+    "id": 1,
+    "title": "Nome do Filme",
+    "synopsis": "Uma sinopse curta.",
+    "duration_min": 120,
+    "classification": "12",
+    "genre": "Ação",
+    "poster_url": "assets/images/posters/filme1.jpg"
+  }
+]
