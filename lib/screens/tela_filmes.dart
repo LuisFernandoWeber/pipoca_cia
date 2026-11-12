@@ -81,13 +81,140 @@ class _TelaFilmePageState extends State<TelaFilmes> {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         // Foto
+                        Expanded(
+                          child: Container(
+                            decoration: const BoxDecoration(
+                              borderRadius: BorderRadius.vertical(top: Radius.circular(8)),
+                              image: DecorationImage(
+                                image: AssetImage('assets/images/posters/images (1).jpg'),
+                                fit: BoxFit.cover,
+                              )
+                            ),
+                          ), 
+                        ),
 
-                        // Titulo
 
-                        // genero
+                        // Rodapé
+                        Padding(
+                          padding: EdgeInsets.all(12),
 
-                        //Duracao / Ver Mais
-                        
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              // Titulo
+                              Text( 
+                                'Duna: Parte 2',
+                                textAlign: TextAlign.left,
+                                style: TextStyle(
+                                  color: Theme.of(context).colorScheme.onSurface,                              
+                                  fontSize: 14,
+                                  fontFamily: 'Montserrat',
+                                ),
+                                maxLines: 1,
+                                overflow: TextOverflow.ellipsis,
+                              ),
+                              SizedBox(height: 6),
+
+                              // Generos
+                              Row(
+                                children: [
+                                  
+                                  SizedBox(width: 6),
+                                  Container(
+                                    decoration: BoxDecoration(
+                                      borderRadius: BorderRadius.all(Radius.circular(8)),
+                                      color: Theme.of(context).colorScheme.surface,
+                                    ),
+                                    child: Padding(
+                                      padding: EdgeInsets.symmetric(horizontal: 6, vertical: 3),
+
+                                      child: Text(
+                                          'Ficção',
+                                          style: TextStyle(
+                                            color: const Color.fromARGB(255, 190, 190, 190),
+                                            fontSize: 8,
+                                            fontFamily: 'Montserrat',
+                                          ),
+                                        ),
+                                      ),
+                                    ),
+                                  SizedBox(width: 6),
+
+                                  Container(
+                                    decoration: BoxDecoration(
+                                      borderRadius: BorderRadius.all(Radius.circular(8)),
+                                      color: Theme.of(context).colorScheme.surface,
+                                    ),
+                                    child: Padding(
+                                      padding: EdgeInsets.symmetric(horizontal: 6, vertical: 3),
+
+                                      child: Text(
+                                        'Ação',
+                                        style: TextStyle(
+                                          color: const Color.fromARGB(255, 190, 190, 190),
+                                          fontSize: 8,
+                                          fontFamily: 'Montserrat',
+                                        ),
+                                      ),
+                                    ),
+                                  ),
+                                    
+                                    
+
+                                  
+
+                                ]
+                              ),
+                              SizedBox(height: 6),
+
+
+
+                              // Tempo e ver Mias
+                              Row(
+                                mainAxisAlignment: MainAxisAlignment.spaceBetween, 
+                                children: [
+                                  // Grupo da esquerda: ícone + duração
+                                  Row(
+                                    children: [
+                                      Icon(
+                                        Icons.schedule,
+                                        color: const Color.fromARGB(255, 190, 190, 190),
+                                        size: 15,
+                                      ),
+                                      const SizedBox(width: 4),   // respiro entre ícone e texto
+                                      Text(
+                                        '150 min',
+                                        style: const TextStyle(
+                                          color: Color.fromARGB(255, 190, 190, 190),
+                                          fontSize: 10,
+                                          fontFamily: 'Montserrat',
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+
+                                  // Grupo da direita: "Ver Mais"
+                                  Text(
+                                    'Ver Mais',
+                                    style: TextStyle(
+                                      color: Theme.of(context).colorScheme.primary,
+                                      fontSize: 12,
+                                      fontFamily: 'Montserrat',
+                                    ),
+                                  ),
+                                ],
+                              ),
+
+
+                            ],
+                          ),
+
+
+                    
+     
+                        ),
+
+
                       ],
                     ),
 
